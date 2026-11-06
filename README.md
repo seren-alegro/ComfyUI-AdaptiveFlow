@@ -53,6 +53,17 @@ git clone https://github.com/seren-alegro/ComfyUI-AdaptiveFlow
 Or copy this folder as `ComfyUI-AdaptiveFlow` into
 `ComfyUI/custom_nodes` manually. Then restart ComfyUI.
 
+## Example workflow
+
+`examples/adaptive_flow_basic.json` - a minimal core-nodes-only
+workflow with tolerance 0.01. The checkpoint name in the loader is
+a placeholder - point it at any Anima-family checkpoint, and if
+your setup loads the text encoder / VAE from separate files, swap
+that part of the chain accordingly. Try tolerance 0.05 and 0.002
+next to it and watch `steps_used` move; note that `max_steps` is a
+budget cap, not a step count - lowering it changes nothing until
+the walk actually reaches it.
+
 ## Tests
 
 `tests/test_adaptive.py` - numpy mirror of the step-size controller
