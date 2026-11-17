@@ -5,6 +5,9 @@ description = "Tolerance-driven adaptive step sampler for rectified flow, for Co
 license = "MIT"
 requires-python = ">=3.10"
 
+[project.urls]
+Repository = "https://github.com/seren-alegro/ComfyUI-AdaptiveFlow"
+
 [tool.comfy]
 PublisherId = "seren-alegro"
 DisplayName = "Adaptive Flow"
